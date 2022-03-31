@@ -94,16 +94,16 @@ if ($client->getAccessToken()) {
 ?>
 
 <div class="box">
-<?php if (isset($authUrl)): ?>
-  <div class="request">
-    <a class='login' href='<?= $authUrl ?>'>Connect Me!</a>
-  </div>
-<?php else: ?>
-  <div class="data">
-    <p>Here is the data from your Id Token:</p>
-    <pre><?php var_export($token_data) ?></pre>
-  </div>
-<?php endif ?>
+    <?php if (isset($authUrl)): ?>
+    <div class="request">
+        <a class='login' href='<?php echo $authUrl; ?>'>Connect Me!</a>
+    </div>
+    <?php else: ?>
+    <div class="data">
+        <p>Here is the data from your Id Token:</p>
+        <pre><?php var_export($token_data); ?></pre>
+    </div>
+    <?php endif ?>
 </div>
 
 <?= pageFooter(__FILE__) ?>
